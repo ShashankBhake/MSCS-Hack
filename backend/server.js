@@ -1027,6 +1027,9 @@ const realData = [
 app.get('/test', async (req,res)=>{
       try{
         console.log("CAME HERE");
+
+        // RUN THE CODE BELOW TO POPULATE AND IMPORT THE DATA TO MONGODB. (RUN IT ONLY ONCE TO AVOID UPLOADING MULTIPLE TIMES.)
+        
         // let c = 0;
         // await Data.deleteMany({})
         // for await(let i of realData){
@@ -1054,6 +1057,7 @@ app.get('/test', async (req,res)=>{
         //   })
         //       console.log("CREATED FOR " + c++);
         // }
+        
         let data = await mscs.find({});
         return res.json({
             status : "SUCCESS",
