@@ -1,6 +1,8 @@
 import Navbar from './Navbar';
 // ...
 import { Link } from 'react-router-dom';
+import emb from "../images/emb.png";
+import mscs from "../images/MSCS_LOGO.png";
 
 const Header = () => {
   return (
@@ -9,7 +11,7 @@ const Header = () => {
         <div className="logo-text-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div className="logo-container">
             <Link to="/" className="logo">
-              <img src="emb.png" alt="Logo" className="logo-image" style={{ width: '50px', height: 'auto' }} />
+              <img src={emb} alt="Logo" className="logo-image" style={{ width: '65px', height: '85px' }} />
             </Link>
           </div>
           <div className="text-container" style={{ marginLeft: '20px', marginRight: '20px' }}>
@@ -26,7 +28,7 @@ const Header = () => {
 
           <div className="logo-container">
             <Link to="/" className="logo">
-              <img src="MSCS_LOGO.png" alt="Logo" className="logo-image" style={{ width: '80px', height: 'auto' }} />
+              <img src={mscs} alt="Logo" className="logo-image" style={{ width: '85px', height: '85px' }} />
             </Link>
           </div>
           

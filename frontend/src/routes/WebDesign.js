@@ -1,5 +1,5 @@
 const WebDesign = () => {
-  return <h1>hero</h1>
+  return {};
 };
 
 export default WebDesign;
