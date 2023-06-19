@@ -1,5 +1,5 @@
 {
-    "data.json": {
+    "data": {
         "data": [
             {
                 "sr_no": "1",
@@ -1003,7 +1003,7 @@
             }
         ]
     },
-    "registration_counts.json": {
+    "registration_counts": {
         "labels": [
             "01-04-2022",
             "04-10-2022",
@@ -1033,7 +1033,7 @@
             2
         ]
     },
-    "state_district_sector.json": {
+    "state_district_sector": {
         "UTTAR PRADESH": {
             "KUSHI NAGAR": [
                 "Credit"
