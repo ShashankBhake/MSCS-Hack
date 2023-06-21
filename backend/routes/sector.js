@@ -8,7 +8,8 @@ const { mscs } = require('../models/model');
 var stateSector = require('../full_DB_Data.json')
 router.get('/', async (req, res) => {
     try{
-        res.json(stateSector.state_district_sector)
+      console.log("COME HERE", stateSector.state_district_sector);
+      return  res.status(200).json(stateSector.state_district_sector)
     }
     catch(err)
     {

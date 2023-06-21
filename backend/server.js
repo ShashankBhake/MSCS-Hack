@@ -10,6 +10,14 @@ const sector_type = require('./routes/sector')
 // const router = express.Router();
 const app = express()
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3001"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
+
 app.use('/totalData', router)
 app.use('/reg_count', reg_count)
 app.use('/sector_type', sector_type)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 
@@ -58,12 +58,15 @@ export const data = {
 function BarChart() {
 
     
-
+    const [vere, setData] = useState({});
     useEffect(()=>{
 
         async function getdata(){
-            try{const response = await axios.get('localhost:3000/sector_type')
-            console.log(response)}catch(e){
+            try {
+                const response = await axios.get('http://localhost:3000/sector_type/')
+                console.log(response.data)
+                setData(response.data)
+            } catch (e) {
                 console.log(e)
             }
         }
@@ -75,7 +78,12 @@ function BarChart() {
         width: "70vw"
     }}
   >
-<Bar options={options} data={data} />
+{/* <Bar options={options} data={data} /> */}
+    {Object.keys(vere).length && Object.keys(vere)?.map((key) => {
+        <>
+            <h1>{key}</h1>
+        </>
+    })}
   </div>
 }
 
