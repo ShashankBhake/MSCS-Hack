@@ -10,6 +10,13 @@ const sector_type = require('./routes/sector')
 // const router = express.Router();
 const app = express()
 
+
+const corsOptions = {
+  origin: "http://localhost:3000" // frontend URI (ReactJS)
+}
+app.use(express.json());
+app.use(cors(corsOptions));
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:3001"); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -1389,7 +1396,7 @@ app.get('/', async (req,res)=>{
 
 
 
-app.listen(3000, (err, res) =>{
+app.listen(4000, (err, res) =>{
   console.log("Listening on port 3000");
 });
 
