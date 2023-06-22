@@ -3,76 +3,51 @@ export const menuItems = [
     title: 'Home',
     url: '/',
   },
-  {
-    title: 'Chart',
-    url: '/services',
-    submenu: [
-      {
-        title: 'State Wise',
-        url: 'web-design',
-      },
-      {
-      title: 'Year Wise',
-      url: 'web-dev',
-      },
-      {
-      title: 'Type Wise',
-      url: 'web-dev',
-      },
-      ],
-  },
-
 
   {
     title: 'Reg.Societies',
-    url: '/services',
     submenu: [
       {
         title: 'State Wise List',
-        url: 'web-design',
+        url: 'map',
       },
       {
       title: 'All Reg.Societies (Pdf)',
-      url: 'web-dev',
+      url: 'https://mscs.dac.gov.in/Proposals/ALL_REG_MSCS.pdf',
       },
       {
       title: 'Societies Registered before 1986',
-      url: 'web-dev',
+      url: 'https://mscs.dac.gov.in/Proposals/OldListMSCS.pdf',
       },
       {
       title: 'Calender Year-wise List',
       url: 'web-dev',
       },
-      {
-        title: 'Financial Year-wise List',
-        url: 'web-dev',
-        },
       ],
   },
 
   {
     title: 'Forms',
-    url: '/services',
     submenu: [
       {
         title: 'Form I',
-        url: 'web-design',
+        url: 'https://mscs.dac.gov.in/Form/Form1.pdf',
       },
       {
       title: 'Form II',
-      url: 'web-dev',
+      url: 'https://mscs.dac.gov.in/Form/Form2.pdf',
       },
       {
       title: 'Form III',
-      url: 'web-dev',
+      url: 'https://mscs.dac.gov.in/Form/Form3.pdf',
       },
       {
       title: 'Form IV',
-      url: 'web-dev',
+      url: 'https://mscs.dac.gov.in/Form/Form4.pdf',
       },
       {
         title: 'Form V',
-        url: 'web-dev',
+        url: 'https://mscs.dac.gov.in/Form/Form5.pdf',
         },
       ],
   },
@@ -80,27 +55,26 @@ export const menuItems = [
 
   {
     title: 'MSCS Act',
-    url: '/services',
     submenu: [
       {
         title: 'MSCS Act,2002',
-        url: 'web-design',
+        url: 'https://mscs.dac.gov.in/Guidelines/GuidelineAct2002.pdf',
       },
       {
       title: 'MSCS Rules,2002',
-      url: 'web-dev',
+      url: 'https://mscs.dac.gov.in/Form/Rules2002.pdf',
       },
       {
       title: 'CheckList',
-      url: 'web-dev',
+      url: 'CheckList',
       },
       {
       title: 'Model Bye-laws',
-      url: 'web-dev',
+      url: 'ByeLaws',
       },
       {
         title: 'National Policy on Cooperative 2002',
-        url: 'web-dev',
+        url: 'https://mscs.dac.gov.in/Form/NatPolicy02.pdf',
         },
       ],
   },
@@ -108,7 +82,6 @@ export const menuItems = [
 
   {
     title: 'Application',
-    url: '/services',
     submenu: [
       {
         title: 'Received Application',
@@ -123,26 +96,24 @@ export const menuItems = [
 
   {
     title: 'MSCS-MIS',
-    url: '/services',
     submenu: [
       {
         title: 'New User Registration',
-        url: 'web-design',
+        url: 'Register',
       },
       {
       title: 'User Login',
-      url: 'web-dev',
+      url: 'login',
       },
       {
-      title: 'Admin User',
-      url: 'web-dev',
+      title: 'Appeal',
+      url: 'AppealForm',
       },
       ],
   },
 
   {
     title: 'Reports',
-    url: '/services',
     submenu: [
       {
         title: 'All Reg. Societies',
@@ -170,15 +141,14 @@ export const menuItems = [
 
   {
     title: 'Liquidation',
-    url: '/services',
     submenu: [
       {
         title: 'Societies under Liquidation',
         url: 'web-design',
       },
       {
-      title: '>Liquidation Process Initiated',
-      url: 'web-dev',
+      title: 'Liquidation Process Initiated',
+      url: 'https://mscs.dac.gov.in/Proposals/LiquidationInitiated.pdf',
       },
       ],
   },

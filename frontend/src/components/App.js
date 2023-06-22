@@ -1,36 +1,37 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from '../routes/Home';
-import About from '../routes/About';
-import WebDesign from '../routes/WebDesign';
-import SEO from '../routes/SEO';
-import Services from '../routes/Services';
 import Layout from './Layout';
-import Frontend from '../routes/Frontend';
-import PHP from '../routes/PHP';
-import Node from '../routes/Node';
-import AboutWho from '../routes/AboutWho';
-import OurValues from '../routes/OurValues';
-import WebDev from '../routes/WebDev';
-import BarChart from '../charts/BarChart';
+import ByeLaws from '../routes/ByeLaws';
+import Checklist from '../routes/CheckList';
+import BarChart from '../charts/BarChart'
+import AppealForm from '../routes/AppealForm'
+import Map from '../routes/Map'
+import StateSocieties from '../charts/StateSocieties'
+import Login from '../routes/Login'
+import Dashboard from '../routes/Dashboard';
+import Header from './Header';
+import Register from '../routes/Register'
+import ForgotPass from '../routes/ForgotPass';
+
 const App = () => {
   return (
     <>
+    <Header/>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="services" element={<Services />} />
-          <Route path="web-design" element={<WebDesign />} />
-          <Route path="web-dev" element={<WebDev />} />
-          <Route path="frontend" element={<Frontend />} />
-          <Route path="node" element={<Node />} />
-          <Route path="seo" element={<SEO />} />
-          <Route path="php" element={<PHP />} />
-          <Route path="who-we-are" element={<AboutWho />} />
-          <Route path="our-values" element={<OurValues />} />
-          <Route path='chart' element={<BarChart/>} />
+        {/* <Route path="/" element={<Layout />}> */}
+          
+          <Route path="CheckList" element={<Checklist />} />
+          <Route path="ByeLaws" element={<ByeLaws />} />
+          <Route path='chart'  element={<StateSocieties/>} />
+          <Route path='' element={<Dashboard/>} />
+          <Route path='appealform' element={<AppealForm/>} />
+          <Route path='forgotpass' element={<ForgotPass/>} />
+          <Route path='register' element={<Register/>} />
+          <Route path='login' element={<Login/>} />
+          <Route path='map' element={<Map/>} />
           <Route path="*" element={<p>Not found!</p>} />
-        </Route>
+          
+
+        {/* </Route> */}
       </Routes>
     </>
   );

@@ -1,0 +1,19 @@
+.forgot-password-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .forgot-password-form {
+    width: 300px;
+    margin-top: 50px; /* Adjust the margin-top value as needed */
+    text-align: center;
+  }
+  
+  .forgot-password-button {
+    margin-top: 16px; /* Adjust the margin-top value as needed */
+  }
+  .spacing{
+    margin-top: 16px;
+  }  

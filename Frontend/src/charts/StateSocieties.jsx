@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import dataSet from '../data/state_societies.json'
 
 
 import {
@@ -14,7 +14,6 @@ import {
 import { Bar } from 'react-chartjs-2';
 import { useEffect } from 'react';
 import { PieChart } from './PieChart';
-import StateSocieties from './StateSocieties';
 
 
 ChartJS.register(
@@ -45,41 +44,14 @@ export const options = {
 
 
 
-function BarChart() {
-  
-
-    const [total, setTotal] = useState({})  
-    const [vlabel, setLabel] = useState([]);
-    const [count, setCount] = useState([]);
-    useEffect(()=>{
-
-      async function getdata() {
-        try {
-          const response = await axios.get('http://localhost:3000/reg_count');
-          console.log(response.data);
-      
-          
-          setLabel(response.data.labels);
-          setCount(response.data.counts);
-          console.log(vlabel)
-        } catch (e) {
-          console.log(e);
-        }
-      }
-        getdata();
-    }, [])
-
-
-
-    const labels = vlabel;
-
+function StateSocieties() {
  const data = {
-  labels,
+  labels: dataSet.state,
   datasets: [
     {
       label: 'Dataset 1',
-      data: count,
-      backgroundColor: '#9cb2d6',
+      data: dataSet.count,
+      backgroundColor: '#00abad',
     },
     
   ],
@@ -87,9 +59,10 @@ function BarChart() {
 
   return <Bar options={options} data={data} />
     
-   
+    
+
     
   
 }
 
-export default BarChart;
+export default StateSocieties;

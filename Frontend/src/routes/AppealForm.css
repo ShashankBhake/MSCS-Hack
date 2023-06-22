@@ -1,0 +1,25 @@
+.appeal-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 50px;
+  }
+  
+  .appeal-form {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .file-upload-container {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .submit-button-container {
+    text-align: center;
+  }
+  
