@@ -34,12 +34,14 @@ export function PieChart() {
 
 
   const data = {
-    labels:['Credit', 'Agro', 'Health/Hospital', 'Federation', 'Housing', 'Tourism', 'Fisheries', 'Construction', 'Others', 'Cooperative Bank', 'Industrial/Textile', 'Marketing', 'Dair  y']
+    labels:['Credit', 'Agro', 'Health/Hospital', 'Federation', 'Housing', 'Tourism', 'Fisheries', 'Construction', 'Others', 'Cooperative Bank', 'Industrial/Textile', 'Marketing', 'Dairy']
     ,
+    
     datasets: [
       {
         label: '# of registrations',
         data:  [7, 52, 9, 2, 5, 1, 5, 1, 3, 10, 2, 2, 1],
+        
         backgroundColor: [
           'green',
           'blue',
@@ -70,8 +72,10 @@ export function PieChart() {
           'Brown'
         ],
         borderWidth: 1,
+        
       },
     ],
+    
   };
-  return <Pie data={data} />
+  return <Pie data={data}     />
 }

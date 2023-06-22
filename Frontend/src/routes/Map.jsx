@@ -123,7 +123,7 @@ const Map = () => {
           );
         }}
         mapLayout={{
-          title: "segs",
+          title: "Societies",
           legendTitle: "Number of OCs",
           startColor: "#b3d1ff",
           endColor: "#005ce6",
