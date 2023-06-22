@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import BarChart from "../charts/BarChart";
 import StateSocieties from "../charts/StateSocieties";
 import { PieChart } from "../charts/PieChart";
@@ -10,24 +9,25 @@ function Tile({ title, content }) {
     <Box
       sx={{
         boxShadow: 5,
-        width: "fit-content",
-        padding: 6,
-        backgroundColor: "white",
-        borderRadius: 2,
+        width: "100%",
+        padding: 3,
+        backgroundColor: "#ffffff",
+        borderRadius: 5,
       }}
     >
-      <Stack direction={"row"} gap={5}>
-        <Stack direction={"column"}>
-          <Typography>{title}</Typography>
-          <Typography>{content}</Typography>
-        </Stack>
+      <Stack direction={"row"} gap={2} alignItems="center">
         <div
           style={{
-            width: "50px",
-            height: "50px",
-            backgroundColor: "red",
+            width: "30px",
+            height: "30px",
+            backgroundColor: "#ff5757",
+            borderRadius: "50%",
           }}
         />
+        <Stack direction={"column"}>
+          <Typography variant="subtitle1">{title}</Typography>
+          <Typography variant="h6">{content}</Typography>
+        </Stack>
       </Stack>
     </Box>
   );
@@ -36,113 +36,72 @@ function Tile({ title, content }) {
 const Dashboard = () => {
   const tiles = [
     {
-      title: "Total Registered Societies",
-      content: "100,000",
+      title: "Total Reg. Societies",
+      content: "100",
+      
     },
     {
       title: "Total Sectors",
-      content: "100,000",
+      content: "13",
     },
     {
-      title: "Total Revenue",
-      content: "100,000",
+      title: "Latest Reg. Sector",
+      content: "Agro",
+    },
+    {
+      title: "Latest Registration",
+      content: "31-08-2022",
     },
   ];
 
   return (
-    <>
-      <Container
-        disableGutters
-        maxWidth={"xl"}
-        sx={{
-          backgroundColor: "#e9e9e9",
-          padding: 2,
-          height: "fit-content",
-          overflow: "hidden",
-          margin: "auto",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-      <Typography variant={"h4"} sx={{ textAlign: "center" }}>Dashboard</Typography>
-        <Stack direction={"column"} gap={4}>
-          <Stack
-            direction={"row"}
-            gap={5}
-            sx={{
-              margin: "auto",
-              width: "100%",
-              justifyContent: "space-evenly ",
-            }}
-          >
-            {tiles.map((item, idx) => {
-              return (
-                <Tile key={idx} title={item.title} content={item.content} />
-              );
-            })}
-          </Stack>
-
-          <Stack
-            direction={"column"}
-            gap={3}
-            sx={{
-              justifyContent: "center",
-              width: "100%",
-              margin: "auto",
-            }}
-          >
-            <Box
-              width={"90%"}
-              sx={{
-                backgroundColor: "white",
-                height: "fit-content",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: 2,
-                padding: 1.5,
-                margin: "auto",
-              }}
-            >
-              <StateSocieties />
-            </Box>
-
-            <Stack direction={"row"} gap={3} width={"100%"} sx={{
-              justifyContent: "center",
-              margin: "auto",
-
-            }} >
-              <Box
-                width={"45%"}
-                sx={{
-                  backgroundColor: "white",
-                  height: "fit-content",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  borderRadius: 2,
-                  padding: 1.5,
-                }}
-              >
-                <BarChart />
-              </Box>
-
-              <Box
-                width={"45%"}
-                sx={{
-                  backgroundColor: "white",
-                  height: "fit-content",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  borderRadius: 2,
-                  padding: 1.5,
-                }}
-              >
-                <PieChart />
-              </Box>
-            </Stack>
-          </Stack>
-        </Stack>
-      </Container>
-    </>
+    <Container
+      disableGutters
+      maxWidth="xl"
+      sx={{
+        backgroundColor: "#f3f7f9",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "24px",
+      }}
+    >
+      <Typography variant="h4" sx={{ textAlign: "center", mb: 4, color: "#354052" }}>
+        Dashboard
+      </Typography>
+      <Grid container spacing={2} justifyContent="center">
+        {tiles.map((item, idx) => (
+          <Grid item key={idx} xs={12} sm={6} md={3}>
+            <Tile title={item.title} content={item.content} />
+          </Grid>
+        ))}
+      </Grid>
+      <Stack direction="row" gap={3} width="100%" justifyContent="center" mt={4} sx={{
+        '@media (max-width: 700px)':{
+          flexDirection: 'column',
+          alignItems: 'center',
+          width: '100%'
+        }
+      }} >
+        <Box width="50%" sx={{ backgroundColor: "#ffffff", borderRadius: 8, padding: 3, '@media (max-width: 700px)':{
+          width: '100%',
+          justifyContent: 'center'
+        } }}>
+          <BarChart />
+        </Box>
+        <Box width="50%" sx={{ backgroundColor: "#ffffff", borderRadius: 8, padding: 3, '@media (max-width: 700px)':{
+          width: '100%',
+          justifyContent: 'center'
+        } }}>
+          <PieChart />
+        </Box>
+      </Stack>
+      <Box width="100%" mt={4} sx={{ backgroundColor: "#ffffff", borderRadius: 8, padding: 3 }}>
+        <StateSocieties />
+      </Box>
+    </Container>
   );
 };
 

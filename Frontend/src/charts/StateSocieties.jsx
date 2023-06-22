@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import dataSet from '../data/state_societies.json'
-
+import dataSet from '../data/state_societies.json';
 
 import {
   Chart as ChartJS,
@@ -12,8 +11,6 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import { useEffect } from 'react';
-import { PieChart } from './PieChart';
 
 
 ChartJS.register(
@@ -33,36 +30,37 @@ export const options = {
     },
     title: {
       display: true,
-      text: 'Registration count each day',
+      text: 'Number of Sectors in Each Given State',
     },
     tooltip: {
       enabled: true,
-      
-   },
+      // Add some spacing between the labels and the bars
+      labelSpacing: 10,
+    },
   },
 };
 
-
-
 function StateSocieties() {
- const data = {
-  labels: dataSet.state,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: dataSet.count,
-      backgroundColor: '#00abad',
-    },
-    
-  ],
-};
+  const data = {
+    labels: dataSet.state,
+    datasets: [
+      {
+        label: ['Y-Axis: Number of Sectors   |   X-Axis: States'],
+        data: dataSet.count,
+        backgroundColor: '#00abad',
+      },
+    ],
+  };
 
-  return <Bar options={options} data={data} />
-    
-    
+  const containerStyle = {
+    marginTop: '20px',
+  };
 
-    
-  
+  return (
+    <div style={containerStyle}>
+      <Bar options={options} data={data} />
+    </div>
+  );
 }
 
 export default StateSocieties;

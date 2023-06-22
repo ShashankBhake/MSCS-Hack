@@ -13,8 +13,7 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import { useEffect } from 'react';
-import { PieChart } from './PieChart';
-import StateSocieties from './StateSocieties';
+
 
 
 ChartJS.register(
@@ -77,7 +76,7 @@ function BarChart() {
   labels,
   datasets: [
     {
-      label: 'Dataset 1',
+      label: ['Y-Axis: Number of Registrations   |   X-Axis: Dates'],
       data: count,
       backgroundColor: '#9cb2d6',
     },

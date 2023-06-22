@@ -1,7 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
-import ByeLaws from '../routes/ByeLaws';
-import Checklist from '../routes/CheckList';
 import BarChart from '../charts/BarChart'
 import AppealForm from '../routes/AppealForm'
 import Map from '../routes/Map'
@@ -18,11 +16,8 @@ const App = () => {
     <Header/>
       <Routes>
         {/* <Route path="/" element={<Layout />}> */}
-          
-          <Route path="CheckList" element={<Checklist />} />
-          <Route path="ByeLaws" element={<ByeLaws />} />
           <Route path='chart'  element={<StateSocieties/>} />
-          <Route path='dashboard' element={<Dashboard/>} />
+          <Route path='' element={<Dashboard/>} />
           <Route path='appealform' element={<AppealForm/>} />
           <Route path='forgotpass' element={<ForgotPass/>} />
           <Route path='register' element={<Register/>} />

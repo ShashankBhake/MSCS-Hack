@@ -1,130 +1,152 @@
 import React from "react";
 import DatamapsIndia from "react-datamaps-india";
-import "./map.css";
-const Map = () => {
+import './map.css'
+const MapChart = () => {
   return (
     <div style={{ position: "relative" }}>
+      <h1 className="map-title" style={{display : "flex", justifyContent : "center" , marginTop : "16px",  transform: "translate(-3%)", fontSize : "40px"}} >No. of Societies</h1>
       <DatamapsIndia
         style={{ postion: "relative", left: "25%" }}
         regionData={{
           "Andaman & Nicobar Island": {
-            value: 150,
+            value: 0,
+            s : 0
           },
           "Andhra Pradesh": {
-            value: 470,
+            value: 2,
+            s :1
           },
-          "Arunanchal Pradesh": {
-            value: 248,
+          "Arunachal Pradesh": {
+            value: 0,
+            s : 0
           },
           Assam: {
-            value: 528,
+            value: 1,
+            s : 1
           },
           Bihar: {
-            value: 755,
+            value: 3,
+            s : 2
           },
           Chandigarh: {
-            value: 95,
+            value: 0,
+            s:0
           },
           Chhattisgarh: {
-            value: 1700,
+            value: 0,
+            s:0
           },
           Delhi: {
-            value: 1823,
+            value: 5,
+            s:4
           },
           Goa: {
-            value: 508,
+            value: 0,
+            s:0
           },
           Gujarat: {
-            value: 624,
+            value: 4,
+            s:2
           },
           Haryana: {
-            value: 1244,
+            value: 4,
+            s:4
           },
           "Himachal Pradesh": {
-            value: 640,
+            value: 0,
+            s:0
           },
           "Jammu & Kashmir": {
-            value: 566,
+            value: 1,
+            s:1
           },
           Jharkhand: {
-            value: 814,
+            value: 0,
+            s:0
           },
           Karnataka: {
-            value: 2482,
+            value: 1,
+            s:1
           },
           Kerala: {
-            value: 899,
+            value: 9,
+            s:4
           },
           Lakshadweep: {
-            value: 15,
+            value: 0,
+            s:0
           },
           "Madhya Pradesh": {
-            value: 1176,
+            value: 3,
+            s:2
           },
           Maharashtra: {
-            value: 727,
+            value: 28,
+            s:7
           },
           Manipur: {
-            value: 314,
+            value: 3,
+            s:2
           },
           Meghalaya: {
-            value: 273,
+            value: 0,
+            s:0
           },
           Mizoram: {
-            value: 306,
+            value: 0,
+            s:0
           },
           Nagaland: {
-            value: 374,
+            value: 0,s:0
           },
           Odisha: {
-            value: 395,
+            value: 0,s:0
           },
           Puducherry: {
-            value: 245,
+            value: 0,s:0
           },
           Punjab: {
-            value: 786,
+            value: 1,s:1
           },
           Rajasthan: {
-            value: 1819,
+            value: 0,s:0
           },
           Sikkim: {
-            value: 152,
+            value: 0,s:0
           },
           "Tamil Nadu": {
-            value: 2296,
+            value: 8,s:4
           },
           Telangana: {
-            value: 467,
+            value: 6,s:4
           },
           Tripura: {
-            value: 194,
+            value: 0,s:0
           },
           "Uttar Pradesh": {
-            value: 2944,
+            value: 19,s:6
           },
           Uttarakhand: {
-            value: 1439,
+            value: 1,s:0
           },
           "West Bengal": {
-            value: 1321,
-          },
+            value: 1,s:1
+          }
         }}
         hoverComponent={({ value }) => {
           return (
             <div>
               <div>
-                {value.name} <br />
-                <p> No. of Societies: {value.value}</p>
-                <br />
-                <p>No. of Sectors: {value.value}</p>
+                {value.name}
+                <br/>
+                No. of Socities: {value.value}
+                <br/>
+                No. of Sectors: {value.s}
               </div>
             </div>
           );
         }}
         mapLayout={{
-          title: "Societies",
-          legendTitle: "Number of OCs",
           startColor: "#b3d1ff",
           endColor: "#005ce6",
           hoverTitle: "Count",
@@ -133,11 +155,11 @@ const Map = () => {
           hoverColor: "blue",
           hoverBorderColor: "green",
           height: 10,
-          weight: 30,
+          weight: 30
         }}
       />
     </div>
   );
 };
 
-export default Map;
+export default MapChart;

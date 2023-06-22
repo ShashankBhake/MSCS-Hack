@@ -5,12 +5,13 @@ export const menuItems = [
   },
 
   {
+    title: 'Society Map',
+    url: 'map',
+  },
+
+  {
     title: 'Reg.Societies',
     submenu: [
-      {
-        title: 'State Wise List',
-        url: 'map',
-      },
       {
       title: 'All Reg.Societies (Pdf)',
       url: 'https://mscs.dac.gov.in/Proposals/ALL_REG_MSCS.pdf',
@@ -18,10 +19,6 @@ export const menuItems = [
       {
       title: 'Societies Registered before 1986',
       url: 'https://mscs.dac.gov.in/Proposals/OldListMSCS.pdf',
-      },
-      {
-      title: 'Calender Year-wise List',
-      url: 'web-dev',
       },
       ],
   },
@@ -65,32 +62,9 @@ export const menuItems = [
       url: 'https://mscs.dac.gov.in/Form/Rules2002.pdf',
       },
       {
-      title: 'CheckList',
-      url: 'CheckList',
-      },
-      {
-      title: 'Model Bye-laws',
-      url: 'ByeLaws',
-      },
-      {
         title: 'National Policy on Cooperative 2002',
         url: 'https://mscs.dac.gov.in/Form/NatPolicy02.pdf',
         },
-      ],
-  },
-
-
-  {
-    title: 'Application',
-    submenu: [
-      {
-        title: 'Received Application',
-        url: 'web-design',
-      },
-      {
-      title: 'Status of Application',
-      url: 'web-dev',
-      },
       ],
   },
 
@@ -112,50 +86,15 @@ export const menuItems = [
       ],
   },
 
-  {
-    title: 'Reports',
-    submenu: [
-      {
-        title: 'All Reg. Societies',
-        url: 'web-design',
-      },
-      {
-      title: 'Registered Users',
-      url: 'web-dev',
-      },
-      {
-      title: 'Filed Annual Returns Online',
-      url: 'web-dev',
-      },
-      {
-      title: 'Annual Returns : Offline',
-      url: 'web-dev',
-      },
-      {
-        title: 'Reminder Message',
-        url: 'web-dev',
-        },
-      ],
-  },
-
 
   {
     title: 'Liquidation',
     submenu: [
       {
-        title: 'Societies under Liquidation',
-        url: 'web-design',
-      },
-      {
       title: 'Liquidation Process Initiated',
       url: 'https://mscs.dac.gov.in/Proposals/LiquidationInitiated.pdf',
       },
       ],
-  },
-
-  {
-    title: 'Banks',
-    url: '/',
   },
   
 ];
